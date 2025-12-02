@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta a Papa Noel - moran.it</title>
+    <link href="https://fonts.cdnfonts.com/css/passeio-test" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/05289e866fe7e1e99d27a7a31f8d3b66?family=Trattatello" rel="stylesheet"> 
+    <style>
+        :root {
+            --bgcolor: #2e2e2e;
+            --fgcolor: #d6d6d6;
+            --hovercolor: #e87d3e;
+        }
+
+        body {
+            font-family: 'Passeio Test', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background-color: var(--bgcolor);
+            color: var(--fgcolor);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -30px;
+            color: #ffffff;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+            animation: fall linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(100vh) translateX(var(--drift, 50px)) rotate(360deg);
+                opacity: 0.3;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 100;
+        }
+
+        .letter {
+            font-family: 'Trattatello', serif;
+            font-size: 1.4em;
+            background-color: rgba(46, 46, 46, 0.95);
+            border: 2px solid var(--fgcolor);
+            border-radius: 10px;
+            padding: 40px;
+            line-height: 1.8;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 10;
+        }
+
+        .letter-header {
+            text-align: right;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .letter-greeting {
+            margin-bottom: 20px;
+        }
+
+        .letter-body {
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .letter-body p {
+            margin-bottom: 15px;
+        }
+
+        .letter-closing {
+            margin-top: 30px;
+            text-align: right;
+        }
+
+        .letter-signature {
+            margin-top: 20px;
+            text-align: right;
+            font-style: italic;
+        }
+
+        .letter a {
+            color: #B0E0E6;
+            text-decoration: underline;
+        }
+
+        .letter a:hover {
+            color: #87CEEB;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--hovercolor);
+            margin-bottom: 30px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: var(--fgcolor);
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--hovercolor);
+        }
+
+        .back-link i {
+            margin-right: 8px;
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="snow-container" id="snow-container"></div>
+    <div class="container">
+        <div class="letter">
+            <div class="letter-header">
+                <p>Diciembre 2025</p>
+            </div>
+
+            <div class="letter-greeting">
+                <p>Querido Papa Noel,</p>
+            </div>
+
+            <div class="letter-body">
+                <p>
+                    Espero que esta carta te encuentre bien y que todos los renos estén en perfecto estado 
+                    para la noche mágica del 24 de diciembre.
+                </p>
+                
+                <p>
+                    Este año he intentado ser bueno y portarme bien. He trabajado duro en mis proyectos,
+                    he ayudado a otros cuando he podido, y he tratado de ser una buena persona en general.
+                </p>
+                
+                <p>
+                    Si es posible, me gustaría pedirte algunas cosas para esta Navidad:
+                </p>
+                
+                <ul style="margin-left: 20px; margin-bottom: 20px;">
+
+                    <li>Salud y felicidad para mi familia y amigos</li>
+                    <li>Un rodillo de madera hecho de una sola pieza</li>
+                    <li>Polo de lana merino, como <a href="https://www.loom.fr/collections/vestiaire-homme/products/le-t-shirt-merinos?variant=42770566578400">este</a>, talla M</li>
+                    <li>El botón para bailar 30 segundos, <a href="https://global.30sdp.com/">este</a></li>
+                    <li>Un vuelo a Marrakesh para cuatro personas</li>
+                    <li>Un mueble para el garage para guardar las botellas, como <a href="https://www.ikea.com/addon-app/storageone/ivar/web/latest/fr/fr/?vpcSource=clipboard#/vpc/YJ4HW4">este</a></li>
+                    <li>Un iPad</li>
+                    <li>Un vaso para hacer crecer una palta</li>
+                    <li>Un mundo más pacífico y sostenible para todos</li>
+                </ul>
+
+
+
+                <p>
+                    Sé que algunas de estas cosas son grandes deseos, pero confío en que la magia de la 
+                    Navidad puede hacer que al menos algunas de ellas se hagan realidad.
+                </p>
+                
+                <p>
+                    También quiero agradecerte por todas las cosas buenas que he recibido este año. 
+                    He sido muy afortunado y estoy agradecido por todo lo que tengo.
+                </p>
+            </div>
+
+            <div class="letter-closing">
+                <p>Con mucho cariño y esperanza,</p>
+            </div>
+
+            <div class="letter-signature">
+                <p>-Alvaro</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Create snowflakes
+        const snowContainer = document.getElementById('snow-container');
+        const snowflakeSymbols = ['❄', '❅', '❆', '✻', '✼', '✽', '✾', '✿'];
+        const numSnowflakes = 50;
+
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.textContent = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
+            
+            // Random starting position
+            snowflake.style.left = Math.random() * 100 + '%';
+            
+            // Random size
+            const size = Math.random() * 1.5 + 0.5;
+            snowflake.style.fontSize = size + 'em';
+            
+            // Random animation duration (slower = longer duration)
+            const duration = Math.random() * 10 + 15; // 15-25 seconds for slow fall
+            snowflake.style.animationDuration = duration + 's';
+            
+            // Random delay
+            snowflake.style.animationDelay = Math.random() * 5 + 's';
+            
+            // Random horizontal drift
+            const drift = (Math.random() - 0.5) * 100;
+            snowflake.style.setProperty('--drift', drift + 'px');
+            
+            snowContainer.appendChild(snowflake);
+            
+            // Remove snowflake after animation completes
+            setTimeout(() => {
+                snowflake.remove();
+                createSnowflake(); // Create a new one
+            }, duration * 1000);
+        }
+
+        // Create initial snowflakes
+        for (let i = 0; i < numSnowflakes; i++) {
+            setTimeout(() => {
+                createSnowflake();
+            }, i * 200); // Stagger creation
+        }
+    </script>
+</body>
+
+</html>
+
